@@ -8,16 +8,25 @@
 //     }
 // }
 
+// class Solution {
+//   public boolean solution(String s) {
+//       if(s.length() == 4 || s.length() == 6){
+//           try{
+//               int x = Integer.parseInt(s);
+//               return true;
+//           } catch(NumberFormatException e){
+//               return false;
+//           }
+//       }
+//       else return false;
+//   }
+// }
+
+import java.util.*;
+
 class Solution {
   public boolean solution(String s) {
-      if(s.length() == 4 || s.length() == 6){
-          try{
-              int x = Integer.parseInt(s);
-              return true;
-          } catch(NumberFormatException e){
-              return false;
-          }
-      }
-      else return false;
+        if (s.length() == 4 || s.length() == 6) return s.matches("(^[0-9]*$)");
+        return false;
   }
 }
